@@ -42,7 +42,7 @@ static Catalog *_instance = nil;
 }
 
 -(int)numberOfProduct{
-    return [data count];
+    return (int)[data count];
 }
 
 -(Product *)productWithCode:(NSString*)productCode{

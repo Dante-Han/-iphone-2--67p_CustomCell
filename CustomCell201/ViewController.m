@@ -47,7 +47,7 @@
 -(void)addItem:(id)sender
 {
     NSIndexPath *indexPath = [self.table indexPathForCell:sender];
-    Product *product = [[Catalog defaultCatalog]productAt:indexPath.row];
+    Product *product = [[Catalog defaultCatalog]productAt:(int)indexPath.row];
     
     // 핵심
     [self.cart addProduct:product];
@@ -77,7 +77,7 @@
     if(0==indexPath.section){
         ProductCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PRODUCT_CELL"];
         cell.delegate = self;
-        Product *product = [[Catalog defaultCatalog]productAt:indexPath.row];
+        Product *product = [[Catalog defaultCatalog]productAt:(int)indexPath.row];
         [cell setProductInfo:product];
         
         
@@ -100,7 +100,7 @@
     ProductDetailViewController *detailVC = segue.destinationViewController;
     
     NSIndexPath *indexPath = [self.table indexPathForCell:sender];
-    Product *selectedProduct = [[Catalog defaultCatalog] productAt:indexPath.row];
+    Product *selectedProduct = [[Catalog defaultCatalog] productAt:(int)indexPath.row];
     
     
     
