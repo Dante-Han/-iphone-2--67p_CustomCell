@@ -25,7 +25,11 @@
                   symbolName = "-[CartCell quantity]"
                   moduleName = "CustomCell201"
                   urlString = "file:///Users/yeehaw/Documents/Projects/2014.01.13/CustomCell201-master-master/CustomCell201/CartCell.m"
+<<<<<<< HEAD
                   timestampString = "411361610.888944"
+=======
+                  timestampString = "411353802.221186"
+>>>>>>> 838e092d57e63a51dc8bba3175e0087a2668c40d
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -39,7 +43,11 @@
                   symbolName = "-[CartCell setQuantity:]"
                   moduleName = "CustomCell201"
                   urlString = "file:///Users/yeehaw/Documents/Projects/2014.01.13/CustomCell201-master-master/CustomCell201/CartCell.m"
+<<<<<<< HEAD
                   timestampString = "411361610.889178"
+=======
+                  timestampString = "411353802.221805"
+>>>>>>> 838e092d57e63a51dc8bba3175e0087a2668c40d
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
