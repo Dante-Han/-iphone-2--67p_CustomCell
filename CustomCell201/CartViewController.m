@@ -54,9 +54,10 @@
 {
     CartCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CART_CELL"];
     cell.delegate = self;
-    
-    CartItem *item = self.cart.items[indexPath.row];
-
+    Cart *cart=[Cart defaultCart];
+//    CartItem *item = self.cart.items[indexPath.row];
+    CartItem *item = cart.items[indexPath.row];
+    NSLog(@"%@", item.product.name);
     [cell setCartItem:item];
     return  cell;
 }
