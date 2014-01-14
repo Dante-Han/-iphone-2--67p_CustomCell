@@ -13,11 +13,15 @@
 @interface Cart : NSObject
 
 @property NSMutableArray *items;
+// 카트에 제품 추가
+-(void)addProduct:(Product*)item;
 
--(void)addProduct:(Product *)item;
 
--(void)incQuantity1:(NSString *)productCode;
--(void)decQuantity1:(NSString *)productCode;
+-(void)incQuantity:(NSString *)productCode;
+-(void)decQuantity:(NSString *)productCode;
 -(CartItem *)cartItemWith:(NSString *)productCode;
 
+
+
++(id)defaultCart;
 @end

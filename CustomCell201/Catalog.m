@@ -15,6 +15,8 @@
 }
 
 static Catalog *_instance = nil;
+
+
 +(id)defaultCatalog{
     if(nil == _instance)
         _instance = [[Catalog alloc]init];

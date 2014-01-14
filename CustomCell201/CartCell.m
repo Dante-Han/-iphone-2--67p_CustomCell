@@ -7,6 +7,9 @@
 //
 
 #import "CartCell.h"
+#import "CartDelegate.h"
+#import "CartItem.h"
+#import "Cart.h"
 
 @interface CartCell()
 
@@ -22,8 +25,7 @@
 
 -(IBAction)plusClicked:(id)sender{
     [self.delegate incQuantity:self.productCode];
-    NSLog(@"dddd");
-    NSLog(@"%@",self.productCode);
+    
 }
 
 -(IBAction)minusClicked:(id)sender{

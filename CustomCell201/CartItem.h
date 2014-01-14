@@ -11,8 +11,8 @@
 
 @interface CartItem : NSObject
 
-@property (weak, nonatomic)Product *product;
-@property (nonatomic) int quantity;
+@property (weak, nonatomic)Product *product; // 구입 제품 정보
+@property (nonatomic) int quantity; // 구입 수량
 
 
 @end
