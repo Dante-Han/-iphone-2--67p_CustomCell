@@ -27,6 +27,7 @@
 		00A996AD187BC03400E85DA5 /* CustomCell201Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A996AC187BC03400E85DA5 /* CustomCell201Tests.m */; };
 		00A996BB187BC0C500E85DA5 /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A996BA187BC0C500E85DA5 /* ProductCell.m */; };
 		13B0ABAF187E99DA0093701F /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B0ABAE187E99DA0093701F /* Product.m */; };
+		272BA0F2188386E100DE87F9 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272BA0F1188386E100DE87F9 /* CartViewController.m */; };
 		2754DBEF187FDAE900D98692 /* baseball.png in Resources */ = {isa = PBXBuildFile; fileRef = 2754DBE9187FDAE900D98692 /* baseball.png */; };
 		2754DBF0187FDAE900D98692 /* basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 2754DBEA187FDAE900D98692 /* basketball.png */; };
 		2754DBF1187FDAE900D98692 /* cart.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2754DBEB187FDAE900D98692 /* cart.jpeg */; };
@@ -79,6 +80,8 @@
 		00A996BC187BC10100E85DA5 /* CartDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartDelegate.h; sourceTree = "<group>"; };
 		13B0ABAD187E99DA0093701F /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		13B0ABAE187E99DA0093701F /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		272BA0F0188386E100DE87F9 /* CartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
+		272BA0F1188386E100DE87F9 /* CartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
 		2754DBE9187FDAE900D98692 /* baseball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseball.png; sourceTree = "<group>"; };
 		2754DBEA187FDAE900D98692 /* basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basketball.png; sourceTree = "<group>"; };
 		2754DBEB187FDAE900D98692 /* cart.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cart.jpeg; sourceTree = "<group>"; };
@@ -214,6 +217,8 @@
 				00508139187E4DFB00614E02 /* Cart.m */,
 				00508141187E58F300614E02 /* CartCell.h */,
 				00508142187E58F300614E02 /* CartCell.m */,
+				272BA0F0188386E100DE87F9 /* CartViewController.h */,
+				272BA0F1188386E100DE87F9 /* CartViewController.m */,
 			);
 			name = Cart;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				2754DBF7187FDDB400D98692 /* ProductDetailViewController.m in Sources */,
 				00A996BB187BC0C500E85DA5 /* ProductCell.m in Sources */,
 				00A99698187BC03400E85DA5 /* ViewController.m in Sources */,
+				272BA0F2188386E100DE87F9 /* CartViewController.m in Sources */,
 				13B0ABAF187E99DA0093701F /* Product.m in Sources */,
 				0050813A187E4DFB00614E02 /* Cart.m in Sources */,
 				00508137187E40B600614E02 /* Catalog.m in Sources */,

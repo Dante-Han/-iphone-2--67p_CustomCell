@@ -7,6 +7,7 @@
 //
 
 #import "ProductCell.h"
+#import "CartDelegate.h"
 
 @interface ProductCell()
 @property (weak, nonatomic) IBOutlet UILabel *productPrice;

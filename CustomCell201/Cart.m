@@ -7,7 +7,7 @@
 //
 
 #import "Cart.h"
-#import "ViewController.h"
+#import "CartItem.h"
 #import "CartDelegate.h"
 
 @interface Cart()
@@ -16,8 +16,30 @@
 
 @implementation Cart
 
-// 이 메소드를 누가 쓰게 하려고 만들었나?
+
+
+static Cart *_instance = nil;
+
+
+
++(id)defaultCart{
+    if(nil == _instance)
+        _instance = [[Cart alloc]init];
+    return _instance;
+}//싱글톤 만드는 코드
+-(id)   init
+{
+    self=[super init];
+    if(self)
+    {
+        self.items = [[NSMutableArray alloc]init];
+        
+    }
+    return self;
+}
+
 -(void)addProduct:(Product *)item {
+
     // 카트내 동일 상품 검색
     CartItem *cartItem = [self cartItemWith:item.code];
     if (cartItem == nil) {
@@ -28,22 +50,22 @@
         [self.items addObject:cartItem];
     } else {
         // 동일 제품 검색 성공 -> 제품 수량 증가
-        [self incQuantity1:item.code];
+        [self incQuantity:item.code];
     }
 }
 
--(void)incQuantity1:(NSString *)productCode{
+-(void)incQuantity:(NSString *)productCode{
     CartItem *item = [self cartItemWith:productCode];
     item.quantity++;
     NSLog(@"%d",item.quantity);
 }
 
 
--(void)decQuantity1:(NSString *)productCode{
+-(void)decQuantity:(NSString *)productCode{
     CartItem *item = [self cartItemWith:productCode];
     item.quantity--;
     
-    
+    // 제품 수량이 0이면 삭제
     if(0==item.quantity)
         [self.items removeObject:item];
 }

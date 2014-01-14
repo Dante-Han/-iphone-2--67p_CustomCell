@@ -17,7 +17,7 @@
 
 #import "ProductDetailViewController.h"
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, CartDelegate>
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, ProductCellDelegate>
 @property NSMutableArray *items;
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) Cart *cart;
@@ -27,7 +27,7 @@
 
 @implementation ViewController
 
--(void)incQuantity:(NSString *)productCode{
+/*-(void)incQuantity:(NSString *)productCode{
 
     [self.cart incQuantity1:productCode];
 
@@ -43,6 +43,7 @@
     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:1];
     [self.table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
 }
+*/
 
 -(void)addItem:(id)sender
 {
@@ -52,14 +53,18 @@
     // 핵심
     [self.cart addProduct:product];
     
-    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:1];
-    [self.table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"알림" message:@"카트에 들어갔습니다" delegate:nil cancelButtonTitle:@"닫기" otherButtonTitles:@"확인", nil];
+    [alert show];
+    
+    
+  /*  NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:1];
+    [self.table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];*/
     
     
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return 1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -74,7 +79,7 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(0==indexPath.section){
+    
         ProductCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PRODUCT_CELL"];
         cell.delegate = self;
         Product *product = [[Catalog defaultCatalog]productAt:(int)indexPath.row];
@@ -82,15 +87,10 @@
         
         
         return cell;
-    }
-    else{
-        CartCell *cell = (CartCell *)[tableView dequeueReusableCellWithIdentifier:@"CART_CELL"];
-        cell.delegate = self;
-        CartItem *cartItem = self.cart.items[indexPath.row];
-        [cell setCartItem:cartItem];
-        
-        return cell;
-    }
+    
+
+
+ 
 }
 
 
@@ -113,8 +113,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.cart = [[Cart alloc] init];
-    self.cart.items = [[NSMutableArray alloc] init];
+    self.cart= [Cart defaultCart];
 }
 
 - (void)didReceiveMemoryWarning
