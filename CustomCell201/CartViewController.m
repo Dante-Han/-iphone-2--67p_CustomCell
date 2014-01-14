@@ -72,6 +72,9 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.table reloadData];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];

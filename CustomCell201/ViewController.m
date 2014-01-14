@@ -56,10 +56,10 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"알림" message:@"카트에 들어갔습니다" delegate:nil cancelButtonTitle:@"닫기" otherButtonTitles:@"확인", nil];
     [alert show];
     
-<<<<<<< HEAD
+//<<<<<<< HEAD
     
-=======
->>>>>>> 838e092d57e63a51dc8bba3175e0087a2668c40d
+//=======
+//>>>>>>> 838e092d57e63a51dc8bba3175e0087a2668c40d
   /*  NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:1];
     [self.table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];*/
     

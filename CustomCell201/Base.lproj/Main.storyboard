@@ -161,6 +161,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="IOi-QB-51A" id="Wkf-tV-XXN"/>
+                                    <outlet property="delegate" destination="IOi-QB-51A" id="iNO-ep-E1i"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
